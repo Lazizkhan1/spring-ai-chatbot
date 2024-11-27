@@ -1,0 +1,11 @@
+services:
+  ollama:
+    image: 'ollama/ollama:latest'
+    ports:
+      - '11434'
+  neo4j:
+    image: 'neo4j:latest'
+    environment:
+      - 'NEO4J_AUTH=neo4j/notverysecret'
+    ports:
+      - '7687'
