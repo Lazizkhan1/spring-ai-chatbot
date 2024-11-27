@@ -9,7 +9,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
-import java.util.Objects;
 import java.util.logging.Logger;
 
 @Component
@@ -27,7 +26,7 @@ public class AppInit implements CommandLineRunner {
     private Resource pdfPath;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         TikaDocumentReader reader = new TikaDocumentReader(pdfPath);
         TextSplitter splitter = new TokenTextSplitter();
